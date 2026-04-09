@@ -24,18 +24,23 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Register()
         {
-            return View();
+            return View("Privacy");
         }
         [HttpPost]
         public IActionResult Register(UserAccount userAccount)
         {
-            return View(userAccount);
             if (ModelState.IsValid)
             {
                 userAccounts.Add(userAccount);
-                return RedirectToAction("authorized", "loggedIn");
+                
+                HttpContext.Session.SetString("Username", userAccount.Username);
+                HttpContext.Session.SetString("Email", userAccount.Email);
+                HttpContext.Session.SetString("FullName", userAccount.FullName);
+                HttpContext.Session.SetString("Password", userAccount.Password);
+                
+                return RedirectToAction("Profile", "loggedIn");
             }
-            return View(userAccount);
+            return View("Privacy", userAccount);
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
