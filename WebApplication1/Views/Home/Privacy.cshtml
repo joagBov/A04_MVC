@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+@model UserAccount
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,22 +14,22 @@
 </head>
 <body>
     <h1>Regeister</h1>
-    <form>
+    <form asp-action="Register" method="post">
         <div>
             <label for="fullname" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="fullname" size="35" placeholder="Enter full name">
+            <input asp-for="FullName" type="text" class="form-control" id="fullname" size="35" placeholder="Enter full name">
         </div>
         <div>
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" size="35" placeholder="Enter email">
+            <input asp-for="Email" type="email" class="form-control" id="email" size="35" placeholder="Enter email">
         </div>
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" size="35" placeholder="Enter username">
+            <input asp-for="Username" type="text" class="form-control" id="username" size="35" placeholder="Enter username">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" size="35" placeholder="Enter password">
+            <input asp-for="Password" type="password" class="form-control" id="password" size="35" placeholder="Enter password">
         </div>
         <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Register</button>
     </form>
