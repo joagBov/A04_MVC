@@ -17,8 +17,11 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult login()
+        {
+            return View();
+        }
+        public IActionResult Register()
         {
             return View();
         }

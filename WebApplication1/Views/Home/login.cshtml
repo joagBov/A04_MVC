@@ -16,8 +16,8 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" size="35" placeholder="Enter password">
         </div>
-        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;">Login</button>
-        <button type="button" class="btn btn-secondary" style="padding: 10px 20px;">Register</button>
+        <button type="submit" class="btn btn-primary" style="padding: 10px 20px;"asp-controller="loggedIn" asp-action="authorized">Login</button>
+        <button type="button" class="btn btn-secondary" style="padding: 10px 20px;" asp-controller="Home" asp-action="Privacy">Register</button>
     </form>
     </checklist>
 </div>
