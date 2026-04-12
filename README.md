@@ -23,10 +23,12 @@ Item Management (CRUD):
   Add/Edit Item Modal or Page:
   Form fields for Name, Category (dropdown), Value (numeric input), and Description (multi-line text area).
   "Save" and "Cancel" buttons.
-  Item Detail View:
+
+Item Detail View:
     Expanded view of an item’s details (especially the optional Description).
     Direct "Edit" and "Delete" icons.
     Delete Confirmation: A simple pop-up/modal to confirm deletion ("Are you sure you want to delete this item?") to prevent accidental data loss.
+
 Profile & Account Settings:
   Residence Section: * Editable fields for Address and Residence Type.
   Account Security: * Option to change password.
